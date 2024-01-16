@@ -21,9 +21,9 @@ function App(props) {
       <Alert Alert={alert} showAlert={showAlert} />
       <div className="container">
         <div className="row">
-          <h1 className='heading'>To Do List App</h1>
+          <h1 className='heading fs-1'>To Do List App</h1>
         </div>
-        <DataForm showAlert={showAlert} />
+        <DataForm showAlert={showAlert} /> 
       </div>
     </>
 

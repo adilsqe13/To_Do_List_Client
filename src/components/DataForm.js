@@ -85,7 +85,7 @@ export default function DataForm(props) {
         <ol className="text-light">
           {allTask.length === 0 ? <EmptyList /> : ''}
           {allTask.map((el, index) => (
-            <p key={index} className=' p-3'>
+            <div key={index} className=' p-3 display-screen'>
               <div className="row">
                 <div className="col-1">
                   <RightArrowIcon />
@@ -93,13 +93,13 @@ export default function DataForm(props) {
                 <div className="col-10 tasks">
                   {el.task}
                 </div>
-                <div className="col-1">
-                  <button title='delete' className='dlt-btn' onClick={() => removeTask(el._id)}>
+                <div className="col-1 dfjcac">
+                  <button title='delete' className='dlt-btn dfjcac' onClick={() => removeTask(el._id)}>
                     <DeleteIcon />
                   </button>
                 </div>
               </div>
-            </p>
+            </div>
           ))}
         </ol>
       </div>

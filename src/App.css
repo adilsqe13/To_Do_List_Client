@@ -1,14 +1,18 @@
 .container {
   box-shadow: 8px 8px 15px black;
   border-radius: 10px;
-  width: 500px;
+  width: 100%;
   margin-top: 130px;
   background-color: #022c2e;
+}
+.dfjcac{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .heading {
   color: white;
-  font-size: 54px;
   height: 130px;
   display: flex;
   justify-content: center;
@@ -37,7 +41,7 @@ ol {
   border-radius: 15px;
 }
 
-ol p {
+ .display-screen {
   font-size: 20px;
   font-weight: 400;
   list-style-type: none;
