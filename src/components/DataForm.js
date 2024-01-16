@@ -39,10 +39,10 @@ export default function DataForm(props) {
   };
 
   //Remove a task using Delete-Request
-  const removeTask = (task) => {
-    axios.delete(`${apiUrl}/api/allTask/${task.tasks}`);
+  const removeTask = async(taskId) => {
+    await axios.delete(`${apiUrl}/api/allTask/${taskId}`);
     let updatedTasks = allTask.filter((el) => {
-      return el !== task;
+      return el._id !== taskId;
     });
     setAllTask(updatedTasks);
     props.showAlert("Success", "One task deleted ", "warning");
@@ -84,17 +84,17 @@ export default function DataForm(props) {
       <div className="row result py-3">
         <ol className="text-light">
           {allTask.length === 0 ? <EmptyList /> : ''}
-          {allTask.map((el) => (
-            <p className=' p-3'>
+          {allTask.map((el, index) => (
+            <p key={index} className=' p-3'>
               <div className="row">
                 <div className="col-1">
                   <RightArrowIcon />
                 </div>
                 <div className="col-10 tasks">
-                  {el.tasks}
+                  {el.task}
                 </div>
                 <div className="col-1">
-                  <button title='delete' className='dlt-btn' onClick={() => removeTask(el)}>
+                  <button title='delete' className='dlt-btn' onClick={() => removeTask(el._id)}>
                     <DeleteIcon />
                   </button>
                 </div>
