@@ -1,9 +1,15 @@
 .container {
   box-shadow: 8px 8px 15px black;
   border-radius: 10px;
-  width: 100%;
+  width: 70%;
   margin-top: 130px;
   background-color: #022c2e;
+}
+
+@media only screen and (max-width: 700px){
+    .container{
+      width: 95%;
+    }
 }
 .dfjcac{
   display: flex;
